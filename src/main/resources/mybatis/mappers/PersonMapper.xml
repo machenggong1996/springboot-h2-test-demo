@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="h2demo.mapper.PersonDao">
+    <select id="getPerson" resultType="h2demo.domain.Person">
+        SELECT id,`name` FROM  user_info WHERE id = #{id}
+    </select>
+    <update id="update">
+        update user_info SET `name`=#{name} WHERE id = #{id}
+    </update>
+</mapper>
